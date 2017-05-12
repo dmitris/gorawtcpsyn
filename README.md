@@ -1,15 +1,17 @@
 gorawtcpsyn
 ===========
 
+Copied and modified from github.com/kdar/gorawtcpsyn
+
 Simple go program that will test if a port is open by sending a TCP SYN packet to it. Demonstrates how to use RAW IP sockets in Go 1.x+.
 
 ### Usage
 
-gorawtcpsyn **ip** **port**
+gorawtcpsyn -dest ip -sport srcport -dport destport
 
 ##### Example
 
-gorawtcpsyn 192.168.0.2 5656
+gorawtcpsyn -dest 192.168.0.2 -sport 5656 -dport 6421
 
 ### Note
 
